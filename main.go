@@ -89,6 +89,9 @@ func (c *Client) start(broadcaster *Broadcaster, w http.ResponseWriter, r *http.
 		return
 	}
 
+	emptyMessage := Message { sourceId: clientId, payload: []byte{} }
+	conn.WriteMessage(websocket.TextMessage, emptyMessage.asByteSlice())
+
 	log.Printf("%s is now Player %d\n", r.RemoteAddr, clientId)
 
 	conn.SetReadLimit(messageSizeLimit)
