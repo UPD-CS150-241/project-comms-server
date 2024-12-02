@@ -11,7 +11,7 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-const messageSizeLimit int64 = 200
+const messageSizeLimit int64 = 202
 const clientMessageBufferSize int64 = 256
 
 var upgrader = websocket.Upgrader{
