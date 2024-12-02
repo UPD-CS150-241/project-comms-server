@@ -1,4 +1,4 @@
-# CS 150 Project Communication Server
+# CS 150 24.1 Project: Communication Server
 
 To run with default port `15000`:
 
